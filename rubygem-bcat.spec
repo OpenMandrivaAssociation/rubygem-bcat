@@ -52,7 +52,7 @@ rm -rf %{buildroot}
 %{ruby_gemdir}/gems/%{oname}-%{version}/test/
 %{ruby_gemdir}/gems/%{oname}-%{version}/contrib/
 
-#%files doc
+#% files doc
 %doc %{ruby_gemdir}/doc/%{oname}-%{version}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/man/
 %{ruby_gemdir}/gems/%{oname}-%{version}/COPYING
