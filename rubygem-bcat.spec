@@ -65,3 +65,17 @@ rm -rf %{buildroot}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/%{oname}.gemspec
 %{ruby_gemdir}/cache/%{oname}-%{version}.gem
 %{ruby_gemdir}/specifications/%{oname}-%{version}.gemspec
+
+
+%changelog
+* Wed Feb 15 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.6.1-2
++ Revision: 774161
+- mass rebuild of ruby packages against ruby 1.9.1
+
+* Wed Sep 07 2011 Andrey Smirnov <asmirnov@mandriva.org> 0.6.1-1
++ Revision: 698631
+- rpmlint warning
+
+  + Alexander Barakin <abarakin@mandriva.org>
+    - imported package rubygem-bcat
+
