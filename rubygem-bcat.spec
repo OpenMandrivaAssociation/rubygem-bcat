@@ -1,14 +1,13 @@
 %define oname bcat
 
 Name:       rubygem-%{oname}
-Version:    0.6.1
-Release:	2
+Version:    0.6.2
+Release:	1
 Summary:    CLI Steps for Cucumber, hand-crafted for you in Aruba
 Group:      Development/Ruby
 License:    MIT
 URL:        http://rtomayko.github.com/bcat
-Source0:    http://rubygems.org/gems/%{oname}-%{version}.gem
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
+Source0:    http://rubygems.org/gems/bcat-0.6.2.gem
 Requires:   rubygems
 Requires:   rubygem(cucumber) >= 0.9.4
 Requires:   rubygem(rack) >= 1.1.2
@@ -26,7 +25,6 @@ CLI Steps for Cucumber, hand-crafted for you in Aruba
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{ruby_gemdir}
 gem install --local --install-dir %{buildroot}%{ruby_gemdir} \
             --force --rdoc %{SOURCE0}
@@ -39,7 +37,6 @@ find %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/bin -type f | xargs chm
 rm -f %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/.gitignore
 
 %clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, -)
@@ -65,17 +62,3 @@ rm -rf %{buildroot}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/%{oname}.gemspec
 %{ruby_gemdir}/cache/%{oname}-%{version}.gem
 %{ruby_gemdir}/specifications/%{oname}-%{version}.gemspec
-
-
-%changelog
-* Wed Feb 15 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.6.1-2
-+ Revision: 774161
-- mass rebuild of ruby packages against ruby 1.9.1
-
-* Wed Sep 07 2011 Andrey Smirnov <asmirnov@mandriva.org> 0.6.1-1
-+ Revision: 698631
-- rpmlint warning
-
-  + Alexander Barakin <abarakin@mandriva.org>
-    - imported package rubygem-bcat
-
