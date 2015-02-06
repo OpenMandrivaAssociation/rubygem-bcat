@@ -2,7 +2,7 @@
 
 Name:       rubygem-%{oname}
 Version:    0.6.2
-Release:	1
+Release:	2
 Summary:    CLI Steps for Cucumber, hand-crafted for you in Aruba
 Group:      Development/Ruby
 License:    MIT
