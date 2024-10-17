@@ -6,7 +6,7 @@ Release:	2
 Summary:    CLI Steps for Cucumber, hand-crafted for you in Aruba
 Group:      Development/Ruby
 License:    MIT
-URL:        http://rtomayko.github.com/bcat
+URL:        https://rtomayko.github.com/bcat
 Source0:    http://rubygems.org/gems/bcat-0.6.2.gem
 Requires:   rubygems
 Requires:   rubygem(cucumber) >= 0.9.4
